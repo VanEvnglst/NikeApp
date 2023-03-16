@@ -9,11 +9,12 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
 
 const ProductDetailsScreen = ({ product }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
     <ScrollView
       style={{ marginBottom: 80 }}
     >
@@ -52,6 +53,9 @@ const ProductDetailsScreen = ({ product }) => {
 export default ProductDetailsScreen;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   carouselImage: {
     aspectRatio: 1,
   },
